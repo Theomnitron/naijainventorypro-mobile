@@ -1,10 +1,10 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { DashboardMetrics } from '@/components/DashboardMetrics';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
-import DashboardMetrics from '@/components/DashboardMetrics';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
   return (
@@ -15,7 +15,16 @@ export default function HomeScreen() {
             Welcome to&nbsp;Expo
           </ThemedText>
         </ThemedView>
-        <DashboardMetrics totalSales={768000} revenue={125000} transactions={42} />
+        <DashboardMetrics 
+          todaySales={768000} 
+          monthlySales={4500000} 
+          totalDiscounts={15000} 
+          totalSurplus={5000} 
+          lowStockCount={3} 
+          outOfStockCount={1} 
+          isLoading={false} 
+          onMetricPress={(metricType: string) => console.log(metricType)}
+        />
 
         <ThemedText type="code" style={styles.code}>
           get started

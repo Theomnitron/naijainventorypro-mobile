@@ -1,4 +1,4 @@
-{
+module.exports = {
   "expo": {
     "name": "naijainventory-pro",
     "slug": "naijainventory-pro",
@@ -24,6 +24,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "expo-sharing",
       "expo-router",
       [
         "expo-splash-screen",
@@ -40,6 +41,15 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "firebaseApiKey": process.env.EXPO_PUBLIC_PAYSTACK_PUBLIC_KEY,
+      "firebaseMessagingSenderId": process.env.EXPO_FIREBASE_MESSAGING_SENDER_ID,
+      "firebaseAppId": process.env.EXPO_FIREBASE_APP_ID,
+      "emailjsServiceId": process.env.EXPO_EMAILJS_SERVICE_ID,
+      "emailjsTemplateId": process.env.EXPO_EMAILJS_TEMPLATE_ID,
+      "emailjsPublicKey": process.env.EXPO_EMAILJS_PUBLIC_KEY,
+      "paystackPublicKey": process.env.EXPO_PUBLIC_PAYSTACK_PUBLIC_KEY
     }
   }
 }

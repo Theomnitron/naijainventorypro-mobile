@@ -6,12 +6,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Your Web/Mobile Shared Firebase Credentials
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: process.env.EXPO_FIREBASE_API_KEY as string,
   authDomain: "naijainventorypro.firebaseapp.com",
   projectId: "naijainventorypro",
   storageBucket: "naijainventorypro.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  messagingSenderId: process.env.EXPO_FIREBASE_MESSAGING_SENDER_ID as string,
+  appId: process.env.EXPO_FIREBASE_APP_ID
 };
 
 // Initialize Firebase App Instance cleanly without duplicate instance crashes
