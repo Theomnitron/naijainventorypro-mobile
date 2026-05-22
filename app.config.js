@@ -17,6 +17,7 @@ module.exports = {
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
+      package: "com.anonymous.naijainventorypro",
       "predictiveBackGestureEnabled": false
     },
     "web": {
@@ -43,6 +44,9 @@ module.exports = {
       "reactCompiler": true
     },
     "extra": {
+      eas: {
+        projectId: "a80efddc-0291-4b3a-930e-e3a06f3e385c"
+      },
       "firebaseApiKey": process.env.EXPO_PUBLIC_PAYSTACK_PUBLIC_KEY,
       "firebaseMessagingSenderId": process.env.EXPO_FIREBASE_MESSAGING_SENDER_ID,
       "firebaseAppId": process.env.EXPO_FIREBASE_APP_ID,
